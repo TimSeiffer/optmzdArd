@@ -1,0 +1,22 @@
+{
+  "name": "SensorRobot",
+  "version": "2.0.3",
+  "description": "this lib makes building robots easy",
+  "keywords": ["sensors", "communication", "cpp"],
+  "authors": [
+    {
+      "name": "Tim Seiffer",
+      "email": "tim.seiffer.@outlook.de",
+      "maintainer": true
+    }
+  ],
+  "license": "MIT",
+  "homepage": "https://https://github.com/cvmDestroyer/Arduino-Uno-Optimized-lib",
+  "repository": {
+    "type": "git",
+    "url": "https://https://github.com/cvmDestroyer/Arduino-Uno-Optimized-lib.git"
+  },
+  "frameworks": "*",
+  "platforms": "*",
+  "headers": ["SensorRobot.h"]
+}
