@@ -2,7 +2,7 @@
 #include <Servo.h>
 #include <stdint.h>
 #include "optmzdArd.h"
-#include "SensorRobot.h"
+#include "SensorRobot_sp.h"
 #include <EEPROM.h>
 #include <ArxContainer.h>
 

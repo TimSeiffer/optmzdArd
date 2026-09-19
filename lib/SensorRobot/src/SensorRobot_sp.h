@@ -1,7 +1,13 @@
 // clang-format off
 /*
-  SensorRobot.h - Robot libary for Arduino - Version 2.2
+  SensorRobot_sp.h - Robot libary for Arduino - Version 2.2
   Copyright (c) 2026 Tim Seiffer. All right reserved.
+  _________________________________________________________________________
+  
+  ||  IF YOU GET YOUR HANDS ON THIS COPY DELETE IT YOU SCHOULDNT USE IT  ||
+  ||  ONLY IF YOU ALREADY USER 'optmzdArd.h' OTHERWISE THIS LIB WONT     ||
+  ||  WORK                                                               ||
+  _________________________________________________________________________
 
   This library is free software; you can redistribute it and/or
   modify it under the terms of the GNU Lesser General Public
