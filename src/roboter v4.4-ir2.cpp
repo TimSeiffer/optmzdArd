@@ -90,7 +90,7 @@ STATE current_state = STATE::DRIVING;
 void setup(void)
 {
     gpio::initTimer();
-    // using namespace pin;
+
     gpio::pinMode<pin::irLeft>(INPUT);
     gpio::pinMode<pin::irRight>(INPUT);
 

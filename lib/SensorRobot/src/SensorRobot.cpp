@@ -3,9 +3,9 @@
 #include "SensorRobot.h"
 
 #if defined(__AVR_ATmega328P__) || defined(__AVR_ATmega168__)
-namespace gpio = uno;
+namespace gpio = nuno_sp;
 #else
-namespace gpio = ard;
+namespace gpio = ardu;
 #endif
 // clang-format off
 bool SensorRobot::leftSideIsClear() {

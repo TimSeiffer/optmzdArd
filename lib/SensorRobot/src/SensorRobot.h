@@ -73,12 +73,12 @@
 #define sensor_robot_h
 
 #if defined(__AVR_ATmega328P__) || defined(__AVR_ATmega168__)
-namespace gpio = uno;
+namespace gpio = nuno_sp;
 #else
-namespace gpio = ard;
+namespace gpio = ardu;
 #endif
 
-#include "includes/optmzdArd.h"
+#include "includes/optmzdUno.h"
 #include <stdint.h>
 #include <Servo.h>
 
