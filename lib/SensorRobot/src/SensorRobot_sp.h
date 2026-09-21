@@ -1,13 +1,23 @@
 // clang-format off
 /*
-  SensorRobot_sp.h - Robot libary for Arduino - Version 2.2
-  Copyright (c) 2026 Tim Seiffer. All right reserved.
-  _________________________________________________________________________
-  
-  ||  IF YOU GET YOUR HANDS ON THIS COPY DELETE IT YOU SCHOULDNT USE IT  ||
-  ||  ONLY IF YOU ALREADY USER 'optmzdArd.h' OTHERWISE THIS LIB WONT     ||
-  ||  WORK                                                               ||
-  _________________________________________________________________________
+   _______   _______   _______   _______   _______   _______ 
+  |    ___| |    ___| |    |  | |    ___| |       | |       |  Robot libary for Arduino with optmzdArd.h
+  |___    | |    ___| |  | |  | |___    | |   |   | |   '   |  Version 2.2.1
+  |       | |       | |  |    | |       | |       | |      \   Copyright (c) 2026 Tim Seiffer
+  |_______| |_______| |__|____| |_______| |_______| |___|\__|  All right reserved.
+ 
+   _______   _______   _______   _______   _______              _______   _______ 
+  |       | |       | |       | |       | |       |            |    ___| |       |
+  |   '   | |   |   | |   ' __| |   |   | |_     _|            |___    | |   '   |
+  |      \  |       | |   |   | |       |   |   |    _______   |       | |    ___|
+  |___|\__| |_______| |_______| |_______|   |___|   |_______|  |_______| |___|    
+
+
+  .-----------------------------------------------------------------------.
+  '   IF YOU GET YOUR HANDS ON THIS COPY DELETE IT YOU SCHOULDNT USE IT   '
+  '     ONLY IF YOU ALREADY USE 'optmzdArd.h' OTHERWISE THIS LIB WONT     '
+  '                                 WORK                                  '
+  '-----------------------------------------------------------------------'
 
   This library is free software; you can redistribute it and/or
   modify it under the terms of the GNU Lesser General Public
@@ -24,18 +34,21 @@
 */
 
 /*
-  A basic Robot it initilized per construktor (4 motors for driving)
+  A basic Robot it initilized per construktor either with 2 or 4 prameters for motors
   if additional Sensors are wanted, the attach method can be 
-  called after everthing is configurated with the methods your Robot should 
-  be able to drive, scan distances, detect and drive around object and drive 
+  called after everything is setup you can safely use the all of SensorRobots methods.
+  (as long as attached all nassaray sensors) after your robot should be able to 
+  drive, scan distances, move servos, detect and drive around obj's and of course drive
   along a line with two or one IR-Senor/s
   --HOW-IT-WORKS--
 
-    SensorRobot objName (leftWheelOfTheBack, rightWheelOfTheBack                 | this is the contructor which
-                         leftWheelOfTheFront, rightWheelOfTheFront);             | lets you do the basics like drive
+    SensorRobot objName (overloads+2);                                           | constructor lets you init your robot
+    SensorRobot objName (leftWheelOfTheFront, rightWheelOfTheFront);             | constructor for 2 wheels cant drive backwards
+    SensorRobot objName (leftWheelOfTheBack, rightWheelOfTheBack                 | constructor for 4 wheels or (H-bridge) can drive backwards
+                         leftWheelOfTheFront, rightWheelOfTheFront);             | if only constructor is set the basic .drive methods are unlocked
             
     objName.attach( overloaded+3 );                                              | so far you can attach two types of Sensor and a Servo  - This method has overloads  
-    objName.attach( servoName );                                                 | one Servo can be attached for an ultra sonic sensor
+    objName.attach( servoName );                                                 | one Servo can be attached for an ultra sonic sensor to be placed on it
     objName.attach( ultraSonicTrig, ultraSonicEcho );                            | one Ultra Sonic Sensor with trig and echo can be attached as well
     objName.attach( leftIR, rightIR, lineColor);                                 | and two ir for following the track, the color of the track NEEDS to be given aswell
                 
@@ -43,7 +56,7 @@
     objName.setBaseSpeed( baseSpeed );                                           | this method is for any non-User related driving if not called baseSpeed ist per default 150 
     objName.setThesholds( blackIrVal, whiteIrVal );                              | NECESSARY METHOD FOR IR's. if you dont know the vals for your irs use method calibrate( pin ) and hold your ir above the a black and white spot
                 
-    objName.begin();                                                             | just sets all current configirated pins as INPUT or OUTPUT pls only call in setup
+    objName.begin();                                                             | just sets all current configirated pins as INPUT or OUTPUT ONLY call in setup
     objName.readDistance();                                                      | reads the distance using ultra sonic sensor
     objName.readDistanceTillClear();                                             | lets you scan an obj and return both sides and for every side it gives a bool back if its true and the distance till clear (data stored in irStatus)
 

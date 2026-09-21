@@ -1,15 +1,15 @@
 #include <Arduino.h>
 #include <Servo.h>
 #include <stdint.h>
-#include "optmzdUno.h"
-#include "SensorRobot.h"
+// #include "lib/SensorRobot/src/includes/optmzdUno.h"
+#include "SensorRobotV2.h"
 #include <EEPROM.h>
 #include <ArxContainer.h>
 
 #if defined(__AVR_ATmega328P__) || defined(__AVR_ATmega168__)
-namespace gpio = uno;
+namespace gpio = nuno_sp;
 #else
-namespace gpio = ard;
+namespace gpio = ardu;
 #endif
 
 int error{0};

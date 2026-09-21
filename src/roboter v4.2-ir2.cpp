@@ -1,11 +1,13 @@
 #include <Arduino.h>
-#include "optmzdUno.h"
-#include "SensorRobot.h"
+// #include "optmzdUno.h"
+#include "SensorRobotV2.h"
 
 #include <EEPROM.h>
 #include <Servo.h>
 #include <stdint.h>
 #define __ 0
+
+namespace uno = nuno_sp;
 
 // ---------------------------------
 
@@ -55,13 +57,13 @@ void irStatusSetter();
 
 void setup()
 {
-    uno::pinMode(pin.irLeft, _INPUT);
-    uno::pinMode(pin.irRight, _INPUT);
+    uno::pinMode(pin.irLeft, INPUT);
+    uno::pinMode(pin.irRight, INPUT);
 
-    uno::pinMode(pin.trig, _OUTPUT);
-    uno::pinMode(pin.echo, _INPUT);
+    uno::pinMode(pin.trig, OUTPUT);
+    uno::pinMode(pin.echo, INPUT);
 
-    uno::pinMode(pin.btn, _INPUT_PULLUP);
+    uno::pinMode(pin.btn, INPUT_PULLUP);
     servo.attach(pin.servo);
     // no pinMode needed for motors cuz the lib does it already
 
@@ -179,7 +181,6 @@ void loop()
 
     case LOST_TRACK:
         robot.drive(STOP_Y)[__];
-        // (maybe beep or drive backwards till the Line is detected again)
         break;
     }
     // ===========================================================================================================================

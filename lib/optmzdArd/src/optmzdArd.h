@@ -1,8 +1,11 @@
 // clang-format off
 /*
-  optmzdArd - fast register Library for Arduino
- 
-  Copyright (c) 2026 Tim Seiffer - cvmDestroyer
+'                        ___                             ___   _______                 ___ 
+'  _______   _______   _|   |_   _______   _______   ___|   | |       |  _______   ___|   | fast register Library for Arduino
+' |       | |       | |_     _| |       | |___    | |       | |   |   | |    ___| |       | Version 1.3.0
+' |   '   | |   '   |   |   |   |  |  | | |   ____| |   '   | |       | |   |     |   '   | Copyright (c) 2026 Tim Seiffer
+' |_______| |    ___|   |___|   |__|__|_| |_______| |_______| |___|___| |___|     |_______| All right reserved.
+'           |___|
  
   Permission is hereby granted, free of charge, to any person obtaining a copy
   of this software and associated documentation files (the "Software"), to deal

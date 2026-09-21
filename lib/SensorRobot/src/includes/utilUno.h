@@ -1,12 +1,23 @@
+// clang-format off
+/*                       ___
+'              ___      |___|    ___       __   __                                 __
+'  __   __   _|   |_   _____    |   |     |  | |  |  _ _____   _______            |  |____
+' |  | |  | |_     _| |_    |   |   | __  |  | |  | | V _   | |       |           |   _   |
+' |  |_|  |   |   |    _|   |_  |   v   | |  |_|  | |  | |  | |   '   |    ___    |  | |  |
+' |_______|   |___|   |_______| \______7  |_______| |__| |__| |_______|   |___|   |__| |__|
+'
+  util libary for optmzdUno
+*/
+
 #include <Arduino.h>
 #include <stdint.h>
-// clang-format off
+
 #pragma once
 #pragma once
 #ifndef utilUno_h
 #define utilUno_h
 
-namespace util_uno
+namespace util_nuno_sp
 {
     static inline bool notPwmPin(uint8_t pin)
     {
@@ -36,7 +47,7 @@ namespace util_uno
         }
     }
     template <uint8_t PIN>
-    struct template_util
+    struct template_util_sp
     {
         static bool notPwmPin()
         {

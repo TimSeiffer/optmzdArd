@@ -1,7 +1,17 @@
 // clang-format off
 /*
-  SensorRobot.h - Robot libary for Arduino - Version 2.2
-  Copyright (c) 2026 Tim Seiffer. All right reserved.
+   _______   _______   _______   _______   _______   _______ 
+  |    ___| |    ___| |    |  | |    ___| |       | |       |  Robot libary for Arduino
+  |___    | |    ___| |  | |  | |___    | |   |   | |   '   |  Version 2.2.0
+  |       | |       | |  |    | |       | |       | |      \   Copyright (c) 2026 Tim Seiffer
+  |_______| |_______| |__|____| |_______| |_______| |___|\__|  All right reserved.
+ 
+   _______   _______   _______   _______   _______ 
+  |       | |       | |       | |       | |       |
+  |   '   | |   |   | |   ' __| |   |   | |_     _|
+  |      \  |       | |   |   | |       |   |   |  
+  |___|\__| |_______| |_______| |_______|   |___|  
+
 
   This library is free software; you can redistribute it and/or
   modify it under the terms of the GNU Lesser General Public

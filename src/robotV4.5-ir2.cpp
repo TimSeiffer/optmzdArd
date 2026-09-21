@@ -16,7 +16,6 @@
 
 #define to else
 
-// Zum manuellen Zurücksetzen:
 #define reset_switch() _switched = false;
 
 #if defined(__AVR_ATmega328P__) || defined(__AVR_ATmega168__)
@@ -25,9 +24,9 @@ namespace gpio = uno;
 namespace gpio = ard;
 #endif 
 
-#define black 220        // still need calibration
+#define black 220          // still needs calibration
 #define acceptbl_black 190 // still needs ajustments
-#define white 20         // still need calibration
+#define white 20           // still needs calibration
 
 #define right 0
 #define left 1
@@ -130,7 +129,8 @@ void loop(void)
     if (finishedCalc) {
         uint8_t oldSREG{SREG};
         cli();
-        distance = duration * 0.0343f / 2.0f; // duration / 58.3f
+        uint32_t savedDuration{duration};
+        distance = savedDuration * 0.0343f / 2.0f; // duration / 58.3f
         SREG = oldSREG;
         finishedCalc = false;
     }
@@ -176,7 +176,7 @@ void loop(void)
 
     case STATE::OBSTICAL_DETECTED:
 
-        switch_if (distance <= 12.0cm)
+        switch_if (distance <= 8.0cm)
         {
             robot.drive(FORWARDS)[255];
         } 
@@ -277,3 +277,4 @@ std::array<int, 2> getIrVals(void)
 //     [](const Tri&     t) { return 0.5 * t.b * t.h; },
 //     [](const Ellipse& e) { return PI * e.a * e.b; }
 // );                                                  // '}, shape);' instead of ');'
+// HelloPhotino.NET

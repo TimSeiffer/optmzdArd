@@ -13,7 +13,6 @@ constexpr uint8_t trigPin = 9;
 constexpr uint8_t servoPin = 11;
 constexpr uint8_t btnPin = 12;
 
-// hinweis zu den Pins: 5 und 6 unterstützen echte geschwindigkeitsregelung (PWM).
 constexpr uint8_t frontRight = 5;
 constexpr uint8_t frontLeft = 6;
 constexpr uint8_t backRight = 7;

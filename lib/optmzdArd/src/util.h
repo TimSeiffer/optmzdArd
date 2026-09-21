@@ -1,10 +1,21 @@
+// clang-format off
+/*                       ___              
+'              ___      |___|    ___                 ___
+'  ___ ___   _|   |_   _____    |   |               |   |___
+' |   |   | |_     _| |_    |   |   | __            |       |
+' |   |   |   |   |    _|   |_  |   v   |    ___    |   |   |
+' |_______|   |___|   |_______| \______7    |___|   |___|___|
+'
+  util libary for optmzdArd
+*/
+
 #include <Arduino.h>
 #include <stdint.h>
-// clang-format off
+
 #pragma once
 #pragma once
-#ifndef util_h
-#define util_h
+#ifndef util_ard_h
+#define util_ard_h
 
 namespace util_uno
 {

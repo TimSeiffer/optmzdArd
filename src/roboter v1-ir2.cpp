@@ -115,11 +115,11 @@ void echoInterrupt()
 {
   if (digitalRead(echoPin) == HIGH)
   {
-    startTime = micros(); // Echo startet
+    startTime = micros();
   }
   else
   {
-    duration = micros() - startTime; // Echo beendet
+    duration = micros() - startTime;
     finishedCalc = true;
   }
 }

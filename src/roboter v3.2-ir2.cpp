@@ -1,9 +1,12 @@
-#include "optmzdUno.h"
+// #include "optmzdUno.h"
+#include <SensorRobotV2.h> // gabs damals nicht geadded um rot weggehen zu lassen
 #include <Arduino.h>
 
 #include <EEPROM.h>
 #include <Servo.h>
 #include <stdint.h>
+
+namespace uno = nuno_sp;
 
 constexpr uint8_t left{1};  // #define left 1
 constexpr uint8_t right{0}; // #define right 0
@@ -18,7 +21,6 @@ constexpr uint8_t trigPin{9};
 constexpr uint8_t servoPin{11};
 constexpr uint8_t btnPin{12};
 
-// hinweis zu den Pins: 5 und 6 unterstützen echte geschwindigkeitsregelung (PWM).
 constexpr uint8_t frontRight{5};
 constexpr uint8_t frontLeft{6};
 constexpr uint8_t backRight{7};
@@ -180,7 +182,6 @@ void loop()
 
   case LOST_TRACK:
     stopVehicle();
-    // (Eventuell piepen oder rückwärts fahren, bis die Linie wieder da ist)
     break;
   }
   // ===========================================================================================================================

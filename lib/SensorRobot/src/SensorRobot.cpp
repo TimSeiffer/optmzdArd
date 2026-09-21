@@ -670,9 +670,7 @@ int SensorRobot::calculateError(uint16_t currentSensorValue) {
 }
 int SensorRobot::calculateError() {
     return readIrPrecentage(_irRight) - readIrPrecentage(_irLeft);
-} // clang-format on
-// c!zfscPnF;G:$+G9
-
+} // clang-format off
 /*
   last edited: 05.August.2026
   by Tim Seiffer

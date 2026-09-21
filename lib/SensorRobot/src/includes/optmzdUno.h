@@ -1,4 +1,18 @@
 // clang-format off
+/*
+'                        ___                             ___   __   __                     
+'  _______   _______   _|   |_   _______   _______   ___|   | |  | |  |  _ _____   _______  fast register Library (Uno/nano)
+' |       | |       | |_     _| |       | |___    | |       | |  | |  | | V _   | |       | Version 1.1.0
+' |   '   | |   '   |   |   |   |  |  | | |   ____| |   '   | |  |_|  | |  | |  | |   '   | Copyright (c) 2026 Tim
+' |_______| |    ___|   |___|   |__|__|_| |_______| |_______| |_______| |__| |__| |_______| All right reserved.
+'           |___|
+
+  this libary is a Sub-lib of optmzdArd.h without timer functions such as millis() delay() ...
+  and ONLY nano/uno namespace if you want to use SensorRobot with optmzdArd use the SensorRobot_sp version
+  it is build with optmzdArd in mind and all the timer functions are straight out of opmtzdArd
+  if you wanna know more about the registers of Uno etz take a look over in 
+  https://github.com/cvmDestroyer/optmzdArd/tree/main/lib/optmzdArd/src
+*/
 #ifndef optmzd_Uno_hpp
 #define optmzd_Uno_hpp
 
@@ -138,7 +152,7 @@ namespace nuno_sp
         uint8_t oldSREG{SREG};
         cli();
 
-        util_uno::template_util<PIN>::turnOffPWM();
+        util_nuno_sp::template_util_sp<PIN>::turnOffPWM();
         
         volatile uint8_t* reg{reinterpret_cast<volatile uint8_t*>(hardwearLvl<PIN>::PORT)};
         constexpr uint8_t mask{(1 << hardwearLvl<PIN>::BIT)};
